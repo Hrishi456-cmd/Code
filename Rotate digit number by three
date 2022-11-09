@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        int n=scn.nextInt();
+        
+        int i=1;
+        int store=0;
+        while(i<=100)
+        {
+            int last = n%10;
+            store=last*i+store;
+            n=n/10;
+            i=i*10;
+        }
+        System.out.println(store*10000+n);
+    }
+}
